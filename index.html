@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("theme") === "light" ? "light" : "dark";
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0a1020" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Haris Builds | Muhammad Haris, Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Full-stack MERN developer building business websites, e-commerce stores and custom web apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
