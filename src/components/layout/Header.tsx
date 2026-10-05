@@ -1,5 +1,6 @@
 import { nav } from "../../data";
 import Logo from "../ui/Logo";
+import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Header() {
   return (
@@ -20,12 +21,15 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className="rounded-full bg-cobalt px-4 py-2 text-sm font-semibold text-white md:hidden"
-        >
-          Contact
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="/#contact"
+            className="rounded-full bg-cobalt px-4 py-2 text-sm font-semibold text-white md:hidden"
+          >
+            Contact
+          </a>
+        </div>
       </nav>
     </header>
   );
