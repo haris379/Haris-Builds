@@ -1,6 +1,7 @@
 import Section from "../ui/Section";
 import ContactForm from "../forms/ContactForm";
 import { profile } from "../../data";
+import { MailIcon, GithubIcon, LinkedinIcon, LocationIcon } from "../ui/icons";
 
 export default function Contact() {
   return (
@@ -13,33 +14,39 @@ export default function Contact() {
         <ul className="space-y-3 text-lg">
           <li>
             <a
-              className="font-semibold text-sky underline"
+              className="flex items-center gap-3 font-semibold text-sky hover:underline"
               href={`mailto:${profile.email}`}
             >
+              <MailIcon />
               {profile.email}
             </a>
           </li>
           <li>
             <a
-              className="underline"
+              className="flex items-center gap-3 hover:underline"
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <GithubIcon />
               GitHub
             </a>
           </li>
           <li>
             <a
-              className="underline"
+              className="flex items-center gap-3 hover:underline"
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <LinkedinIcon />
               LinkedIn
             </a>
           </li>
-          <li>{profile.location}</li>
+          <li className="flex items-center gap-3">
+            <LocationIcon />
+            {profile.location}
+          </li>
         </ul>
         <ContactForm />
       </div>
