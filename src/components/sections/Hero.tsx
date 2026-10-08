@@ -4,7 +4,7 @@ import { profile } from "../../data";
 export default function Hero() {
   const [noPhoto, setNoPhoto] = useState(false);
   return (
-    <section className="hero-glow px-5 pb-20 pt-16">
+    <section className="hero-glow px-5 pb-10 pt-16">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[1.4fr_1fr]">
         <div>
           <p className="font-semibold text-sky">
@@ -13,11 +13,6 @@ export default function Hero() {
           <h1 className="mt-4 text-5xl font-extrabold md:text-7xl">
             Web apps that help your business show up and grow online.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-ink/75">
-            I turn business ideas and requirements into functional, easy-to-use
-            web applications, from the interface to the database and the
-            deployed site.
-          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#contact"

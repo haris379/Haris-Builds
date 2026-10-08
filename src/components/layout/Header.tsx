@@ -7,10 +7,18 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-mist bg-paper/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-10">
         {/* Keep your existing logo here */}
-        <a href="/#" className="font-display text-2xl font-extrabold">
-          HB
+        <a
+          href="/#"
+          aria-label="Haris Builds home"
+          className="flex items-center"
+        >
+          <img
+            src="/favicon-180.png"
+            alt="HB logo"
+            className="h-10 w-10 md:h-12 md:w-12"
+          />
         </a>
 
         {/* Desktop links */}

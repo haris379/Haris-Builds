@@ -51,7 +51,7 @@ const LocationIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-night px-5 py-10 text-white">
+    <footer className="border-t border-mist bg-paper px-5 py-10 text-ink">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:justify-between">
         <div className="space-y-2 pl-1">
           <p className="font-display text-xl font-bold">{profile.name}</p>
@@ -80,7 +80,7 @@ export default function Footer() {
             <MailIcon />
             {profile.email}
           </a>
-          <p className="flex items-center gap-2 text-white/70">
+          <p className="flex items-center gap-2 text-ink/70">
             <LocationIcon />
             Lahore, Pakistan
           </p>
@@ -97,7 +97,7 @@ export default function Footer() {
           </ul>
         </nav>
       </div>
-      <p className="mx-auto mt-8 max-w-6xl text-sm text-white/60">
+      <p className="mx-auto mt-8 max-w-6xl text-sm text-ink/60">
         © {new Date().getFullYear()} {profile.name}. All rights reserved.
       </p>
     </footer>
