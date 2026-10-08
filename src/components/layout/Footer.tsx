@@ -1,15 +1,105 @@
-import { profile, nav } from '../../data'
+import type { ReactNode } from "react";
+import { profile, nav } from "../../data";
+
+function Icon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      {children}
+    </svg>
+  );
+}
+
+const MailIcon = () => (
+  <Icon>
+    <rect width="20" height="16" x="2" y="4" rx="2" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  </Icon>
+);
+
+const GithubIcon = () => (
+  <Icon>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </Icon>
+);
+
+const LinkedinIcon = () => (
+  <Icon>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </Icon>
+);
+
+const LocationIcon = () => (
+  <Icon>
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+    <circle cx="12" cy="10" r="3" />
+  </Icon>
+);
 
 export default function Footer() {
   return (
     <footer className="bg-night px-5 py-10 text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:justify-between">
-        <div><p className="font-display text-xl font-bold">{profile.name}</p><p className="text-white/70">{profile.title}</p><a className="underline" href={`mailto:${profile.email}`}>{profile.email}</a></div>
-        <nav aria-label="Footer"><ul className="flex flex-wrap gap-x-5 gap-y-2">{nav.map(([id, l]) => <li key={id}><a href={`/#${id}`} className="hover:underline">{l}</a></li>)}
-          <li><a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a></li>
-          <li><a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a></li></ul></nav>
+        <div className="space-y-2 pl-1">
+          <p className="font-display text-xl font-bold">{profile.name}</p>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:underline"
+          >
+            <LinkedinIcon />
+            LinkedIn
+          </a>
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:underline"
+          >
+            <GithubIcon />
+            GitHub
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline"
+            href={`mailto:${profile.email}`}
+          >
+            <MailIcon />
+            {profile.email}
+          </a>
+          <p className="flex items-center gap-2 text-white/70">
+            <LocationIcon />
+            Lahore, Pakistan
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            {nav.map(([id, l]) => (
+              <li key={id}>
+                <a href={`/#${id}`} className="hover:underline">
+                  {l}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <p className="mx-auto mt-8 max-w-6xl text-sm text-white/60">© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+      <p className="mx-auto mt-8 max-w-6xl text-sm text-white/60">
+        © {new Date().getFullYear()} {profile.name}. All rights reserved.
+      </p>
     </footer>
-  )
+  );
 }
