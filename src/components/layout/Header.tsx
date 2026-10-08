@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-mist bg-paper/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-10">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         {/* Keep your existing logo here */}
         <a
           href="/#"
