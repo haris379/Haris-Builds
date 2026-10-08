@@ -26,17 +26,6 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem("theme");
-          var theme = saved === "light" ? "light" : "dark";
-          document.documentElement.classList.toggle("dark", theme === "dark");
-        } catch (e) {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
