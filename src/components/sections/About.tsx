@@ -8,20 +8,12 @@ export default function About() {
       title="About me"
       intro="I am a full-stack developer based in Lahore, working mainly with the MERN stack."
     >
-      <Reveal className="grid gap-6 md:grid-cols-2">
-        <p className="text-lg">
-          I help businesses build a strong online presence with modern,
-          responsive, and user-friendly web applications. From business websites
-          to e-commerce platforms, I turn ideas into digital solutions that help
-          businesses reach more customers, showcase their services, and grow
-          online.
-        </p>
-        <p className="text-lg">
-          My approach starts with understanding your business goals, identifying
-          your needs, and suggesting practical solutions. From planning and
-          development to testing and deployment, I focus on building reliable,
-          easy-to-use, and scalable solutions that deliver real value to your
-          business.
+      <Reveal>
+        <p className="max-w-3xl text-lg">
+          I build modern, responsive web applications that help businesses
+          establish a strong online presence, reach more customers, and grow. I
+          focus on practical solutions, clean development, and a smooth
+          experience from idea to deployment.
         </p>
       </Reveal>
     </Section>
