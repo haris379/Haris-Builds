@@ -1,36 +1,85 @@
+import { useState } from "react";
 import { nav } from "../../data";
-import Logo from "../ui/Logo";
-import ThemeToggle from "../ui/ThemeToggle";
+import ThemeToggle from "../ui/ThemeToggle"; // adjust to your actual path
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-20 border-b border-mist bg-paper/90 backdrop-blur">
-      <nav
-        aria-label="Main"
-        className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3"
-      >
-        <a href="/" aria-label="Haris Builds, home">
-          <Logo />
+    <header className="sticky top-0 z-50 border-b border-mist bg-paper/90 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+        {/* Keep your existing logo here */}
+        <a href="/#" className="font-display text-2xl font-extrabold">
+          HB
         </a>
-        <ul className="hidden gap-6 md:flex">
-          {nav.map(([id, l]) => (
-            <li key={id}>
-              <a href={`/#${id}`} className="hover:text-sky">
-                {l}
-              </a>
-            </li>
-          ))}
-        </ul>
+
+        {/* Desktop links */}
+        <nav aria-label="Main" className="hidden md:block">
+          <ul className="flex gap-8">
+            {nav.map(([id, l]) => (
+              <li key={id}>
+                <a href={`/#${id}`} className="hover:text-sky">
+                  {l}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <a
-            href="/#contact"
-            className="rounded-full bg-cobalt px-4 py-2 text-sm font-semibold text-white md:hidden"
+
+          {/* Hamburger, mobile only */}
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            className="grid h-9 w-9 place-items-center rounded-full border border-mist transition hover:border-sky md:hidden"
           >
-            Contact
-          </a>
+            <svg
+              viewBox="0 0 24 24"
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              {open ? (
+                <path d="M18 6 6 18M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
-      </nav>
+      </div>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          className="border-t border-mist bg-paper md:hidden"
+        >
+          <ul className="mx-auto flex max-w-6xl flex-col px-5 py-2">
+            {nav.map(([id, l]) => (
+              <li key={id}>
+                <a
+                  href={`/#${id}`}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 text-lg font-semibold hover:text-sky"
+                >
+                  {l}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
