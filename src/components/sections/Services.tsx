@@ -7,7 +7,7 @@ export default function Services() {
     <Section
       id="services"
       title="How I can help your business"
-      intro="A good website builds trust, helps people find and understand your services, and supports your growth. It cannot guarantee sales or rankings, but it gives your business a solid base to work from."
+      intro="A good website builds trust, helps people find and understand your services, and supports your growth."
     >
       <div className="grid gap-5 md:grid-cols-3">
         {services.map((s, i) => (
