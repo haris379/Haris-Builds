@@ -33,12 +33,12 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="float mx-auto grid h-64 w-64 place-items-center overflow-hidden rounded-[2.5rem] bg-cobalt text-7xl font-extrabold text-white md:h-80 md:w-80">
+        <div className="float mx-auto grid aspect-[768/1376] w-56 place-items-center overflow-hidden rounded-[2.5rem] bg-cobalt text-7xl font-extrabold text-white md:w-64">
           {noPhoto ? (
             <span className="font-display">MH</span>
           ) : (
             <img
-              src="/profile.jpg"
+              src="/pic1.jpeg"
               alt="Portrait of Muhammad Haris"
               onError={() => setNoPhoto(true)}
               className="h-full w-full object-cover"
