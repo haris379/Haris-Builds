@@ -38,7 +38,7 @@ export default function Hero() {
             <span className="font-display">MH</span>
           ) : (
             <img
-              src="/pic1.jpeg"
+              src="/profileImage.jpeg"
               alt="Portrait of Muhammad Haris"
               onError={() => setNoPhoto(true)}
               className="h-full w-full object-cover"
