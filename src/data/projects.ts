@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Gallery with category filters and image previews",
     ],
     tech: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
-    live: "",
+    live: "https://royal-fade-three.vercel.app/",
     image: "/shots/RoyalFade.jpeg",
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Automated booking confirmation and notification emails",
     ],
     tech: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
-    live: "",
+    live: "https://luxe-nails-spa-5ycw.vercel.app/",
     image: "/shots/LuxeNails.jpeg",
   },
   {
