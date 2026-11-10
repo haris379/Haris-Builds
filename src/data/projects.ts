@@ -3,19 +3,39 @@ import type { Project } from "../types";
 // Add a project by adding an object here. Put screenshots in /public/shots and set image: '/shots/name.png'.
 export const projects: Project[] = [
   {
-    name: "FeedFirst",
-    summary: "Custom bird-feed e-commerce platform.",
+    name: "Royal Fade",
+    summary: "Premium barber shop website with online appointment booking.",
     purpose:
-      "Lets customers build their own bird-feed mix from ingredients with live pricing.",
+      "Allows customers to explore barber services, view haircut styles, and book appointments online with email verification.",
     features: [
-      "Custom mixes with server-side price recalculation and stock validation",
-      "Weight-based delivery fees",
-      "JWT auth, customer/admin roles, OTP password reset by email",
-      "Admin dashboard; saved addresses with geolocation autofill",
+      "Online appointment booking with real-time slot availability",
+      "Email OTP verification before confirming bookings",
+      "Barber selection, scheduling, and double-booking prevention",
+      "Admin dashboard for managing appointments, barbers, and messages",
+      "Separate developer role for managing services and prices",
+      "Gallery with category filters and image previews",
     ],
-    tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
-    live: "https://feed-first-lgma.vercel.app/",
-    image: "/shots/FeedFirst.png",
+    tech: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    live: "",
+    image: "/shots/RoyalFade.jpeg",
+  },
+  {
+    name: "Luxe Nails",
+    summary: "Full-service nail salon and spa booking platform.",
+    purpose:
+      "Enables customers to explore nail and spa treatments, browse design galleries, and book appointments online.",
+    features: [
+      "Service catalogue covering nail care, massage, facials, and spa treatments",
+      "Online appointment booking with email OTP verification",
+      "Service-based scheduling and availability management",
+      "Admin dashboard for managing appointments and customer messages",
+      "Separate developer role for managing services, prices, and images",
+      "Gallery with design categories and image previews",
+      "Automated booking confirmation and notification emails",
+    ],
+    tech: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    live: "",
+    image: "/shots/LuxeNails.jpeg",
   },
   {
     name: "EasyBuy",
@@ -39,6 +59,22 @@ export const projects: Project[] = [
     live: "https://e-commer-app-frontend.vercel.app/",
     image: "/shots/EasyBuy.png",
   },
+  {
+    name: "FeedFirst",
+    summary: "Custom bird-feed e-commerce platform.",
+    purpose:
+      "Lets customers build their own bird-feed mix from ingredients with live pricing.",
+    features: [
+      "Custom mixes with server-side price recalculation and stock validation",
+      "Weight-based delivery fees",
+      "JWT auth, customer/admin roles, OTP password reset by email",
+      "Admin dashboard; saved addresses with geolocation autofill",
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+    live: "https://feed-first-lgma.vercel.app/",
+    image: "/shots/FeedFirst.png",
+  },
+
   {
     name: "Tiffin&Co",
     summary: "Food delivery website.",
